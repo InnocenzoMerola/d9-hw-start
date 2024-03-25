@@ -38,7 +38,7 @@ const MainSearch = () => {
   return (
     <Container>
       <Row>
-        <Col xs={8} className="mx-auto my-3 d-flex align-items-center justify-content-between">
+        <Col xs={8} className="mx-auto my-3 d-flex flex-column flex-lg-row align-items-center justify-content-between">
           <h1 className="display-1">Remote Jobs Search</h1>
 
           <Button onClick={() => navigation("/favourites")}>
