@@ -16,9 +16,9 @@ export const removeFromFavourites = (i) => {
   };
 };
 
-export const getJobAction = () => {
+export const getJobAction = (query) => {
   return (dispatch, getState) => {
-    fetch("https://strive-benchmark.herokuapp.com/api/jobs?search=dev" + "&limit=20")
+    fetch("https://strive-benchmark.herokuapp.com/api/jobs?search=" + query + "&limit=20")
       .then((response) => {
         if (response.ok) {
           return response.json();
@@ -29,7 +29,7 @@ export const getJobAction = () => {
       .then((fetchedJobs) => {
         dispatch({
           type: GET_JOB_LIST,
-          payload: fetchedJobs,
+          payload: fetchedJobs.data,
         });
       })
       .catch((error) => {

@@ -17,7 +17,7 @@ const MainSearch = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getJobAction());
+    dispatch(getJobAction(query));
   }, []);
 
   const handleChange = (e) => {
