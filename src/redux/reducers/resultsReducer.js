@@ -7,10 +7,6 @@ const initState = {
 const resultsReducer = function (state = initState, action) {
   switch (action.type) {
     case GET_JOB_LIST:
-      //   return {
-      //     ...state,
-      //     jobsList: state.jobsList.concat(action.payload),
-      //   };
       return {
         ...state,
         jobsList: action.payload,

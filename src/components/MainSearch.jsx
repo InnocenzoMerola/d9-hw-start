@@ -16,16 +16,13 @@ const MainSearch = () => {
   const navigation = useNavigate();
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(getJobAction(query));
-  }, []);
-
   const handleChange = (e) => {
     setQuery(e.target.value);
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
+    dispatch(getJobAction(query));
   };
 
   return (
